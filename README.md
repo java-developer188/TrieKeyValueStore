@@ -13,32 +13,37 @@ Five test cases which tests the following commands;
 In this case create command is tested and if everything goes fine it will create the store and return the expected result.
 
 output:
-  create XYZSTORE       XYZSTORE created
+  create XYZSTORE       
+  XYZSTORE created
 
 
 ---JunitTestDelete:
 In this case delete command is tested so first we create a store using create command and then delete it.
 
 output:
-  delete XYZSTORE       XYZSTORE deleted
+  delete XYZSTORE       
+  XYZSTORE deleted
 
 
 ---JunitTestInsert:
 In this case insert command is tested ,we first create a store using create command then insert a KEY/VALUE in that store.
 
 output:
-  insert COLOR BLUE into XYZSTORE       COLOR BLUE inserted into XYZSTORE
+  insert COLOR BLUE into XYZSTORE       
+  COLOR BLUE inserted into XYZSTORE
 
 
 ---JunitTestGet:
 In this case get command is tested,first we create a store then insert any KEY/VALUE then finally use the get command to get its value.
 
 output:
-  get COLOR from XYZSTORE         BLUE
+  get COLOR from XYZSTORE         
+  BLUE
 
 
 ---JunitTestExists:
 In this case exists command is tested. This wil either return true/false upon existence of the key in the store,so after creating store and inserting KEY/VALUE it uses exists command.
 
 output:
-  exists COLOR in XYZSTORE        true
+  exists COLOR in XYZSTORE        
+  true
