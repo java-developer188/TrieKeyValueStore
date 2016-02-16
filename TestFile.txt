@@ -1,0 +1,5 @@
+create MYSTORE
+insert Name SSHaider into MYSTORE
+exists Name in MYSTORE
+get Name from MYSTORE
+delete MYSTORE
