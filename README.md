@@ -1,5 +1,10 @@
 # TrieKeyValueStore
 
+It implements a Trie data structure to store key/value pairs, also it has a trie for all valid commands.
+
+TrieRun class takes a file name (with complete path) as an input from user and then it reads the file line by line and execute the commands."TestFile.txt" present in the /src has the commands which can be used to test the working of the project.
+
+
 com.junit package includes a JunitTest class and other test cases as Junit Test Suite
 
 Five test cases which tests the following commands;
