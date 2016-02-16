@@ -36,16 +36,6 @@ public class TrieRun {
 		}
 		
 		
-//		CommandsHandler handler = new CommandsHandler();
-//		
-//		handler.command("      create                          haider");
-//		handler.command("insert name ssh into haider");
-//		handler.command("exists name in haider");
-//		handler.command("get name from  haider");
-//		handler.command("create haider");
-//		handler.command("delete haider");
-//		handler.command("insert name ssh into haider");
-		
 	}
 
 }
