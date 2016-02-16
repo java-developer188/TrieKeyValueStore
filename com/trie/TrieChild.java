@@ -9,10 +9,6 @@ public class TrieChild {
 	LinkedList<TrieChild> children; 
 	Object value ;
 	
-	public static final int NULL 		= 0;
-	public static final int COMMAND 	= 1;
-	public static final int ARGUMENT 	= 2;
-	
 
 	public TrieChild(char c)
 	{
