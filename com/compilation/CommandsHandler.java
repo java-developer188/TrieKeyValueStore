@@ -2,6 +2,11 @@ package com.compilation;
 
 import com.trie.Trie;
 
+/**
+ * Create commands Trie and handles all the commands entered.
+ * @author SSHaider
+ *
+ */
 public class CommandsHandler {
 	Trie commandsTrie ;
 	Trie keyValueStore;
@@ -19,7 +24,14 @@ public class CommandsHandler {
 		commandsTrie.insert("exists", Compiler.EXISTS_COMMAND);
 		commandsTrie.insert("in", Compiler.IN_COMMAND);
 	}
-
+	
+	
+/**
+ * Takes command and return the result after compiling and executing the command.
+ * It creates a Compiler object which takes command's trie and keyvalue store trie to take action as per command.
+ * @param s
+ * @return
+ */
 	public String  command(String s){
 		Compiler compiler = new Compiler(commandsTrie, keyValueStore);
 
@@ -29,6 +41,11 @@ public class CommandsHandler {
 		return "";
 	}
 	
+	/**
+	 * Trim and remove the white spaces between the commands and arguments.
+	 * @param s
+	 * @return
+	 */
 	private String[] fineTune(String s){
 		String[] rawCommand = s.trim().split(" ");
 		String result="";

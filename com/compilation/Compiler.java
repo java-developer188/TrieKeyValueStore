@@ -2,6 +2,11 @@ package com.compilation;
 
 import com.trie.*;
 
+/**
+ * Verify the command's syntax and execute the action as per command.
+ * @author SSHaider
+ *
+ */
 
 public class Compiler {
 
@@ -25,11 +30,27 @@ public class Compiler {
 		this.keyValueStore = keyValueStore;
 	}
 
-
+/**
+ * Verify the syntax. Takes all tokens (array of words in the command) to verify 
+ * the syntax and arguments count.
+ * @param tokens
+ * @return 
+ * <p><b>true</b> if syntax and argument count is correct</p>
+ * <p><b>false</b> if syntax or argument count is not correct.</p>
+ */
 	public boolean compile(String[] tokens){
 		return compile(tokens,false);
 	}
 
+	/**
+	 * Take tokens to verify. <p>If <b>onlySyntax</b> is true then it simple returns a boolean upon command verification
+	 * else it properly shows error message. </p>
+	 * @param tokens
+	 * @param onlySyntax
+	 * @return
+	 * <p><b>true</b> if syntax and argument count is correct</p>
+	 * <p><b>false</b> if syntax or argument count is not correct.</p>
+	 */
 	private boolean compile(String[] tokens,boolean onlySyntax){
 		if(commandsTrie.search(tokens[0])){
 			int code = (int) commandsTrie.getValue(tokens[0]);
@@ -162,7 +183,13 @@ public class Compiler {
 		}
 	}
 
-
+/**
+ * Perform action as per command.
+ * @return
+ * Object
+ * @throws IllegalArgumentException
+ * If the store does not exist
+ */
 	public Object execute() throws IllegalArgumentException{
 
 		switch (this.command) 

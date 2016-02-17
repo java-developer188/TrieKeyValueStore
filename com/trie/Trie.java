@@ -1,5 +1,11 @@
 package com.trie;
 
+/**
+ * Implementation of a basic trie structure with insert, search and remove methods. 
+ * 
+ * @author SSHaider
+ *
+ */
 public class Trie
 {
     private TrieChild root;
@@ -11,7 +17,10 @@ public class Trie
     }
     
     
-     /* Function to insert word */
+/**
+ * Inserts word into the trie.
+ * @param word
+ */
     public void insert(String word)
     {
         if (search(word) == true) 
@@ -54,7 +63,11 @@ public class Trie
     }
     
     
-    /* Function to search for word */
+/**
+ * Searches the provided word in the trie.
+ * @param word
+ * @return
+ */
     public boolean search(String word)
     {
         TrieChild current = root;  
@@ -75,6 +88,13 @@ public class Trie
         return false;
     }
     
+    
+    /**
+     * Returns the value stored against the provided key in the trie.
+     * @param word
+     * @return
+     * <b>Object</b> - value stored against the key
+     */
     public Object getValue(String word)
     {
     	if(search(word))
@@ -95,7 +115,10 @@ public class Trie
     }
     
     
-    /* Function to remove a word */
+/**
+ * Removes the word from the trie.
+ * @param word
+ */
     public void remove(String word)
     {
         if (search(word) == false)
